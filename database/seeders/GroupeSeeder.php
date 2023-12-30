@@ -26,4 +26,3 @@ class GroupeSeeder extends Seeder
         // Other seed data for different groups if needed
     }
 }
-

@@ -69,7 +69,7 @@ Route::middleware([
                     ->orWhere('idProf', $id);
             })
             ->get();
-        //return response()->json(["msg"=>$seances]);
+       // return response()->json(["msg"=> $idGroupe]);
         return view('salles_dispo',compact('seances'));
     })->name('salleDispo');
 
