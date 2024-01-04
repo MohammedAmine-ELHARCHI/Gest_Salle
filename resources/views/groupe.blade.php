@@ -85,9 +85,6 @@
             
             <form method="post" action="{{ route('storeGroupe') }}" >
             @csrf
-
-             
-
               <div class="row">
                 <div class="col-12">
 

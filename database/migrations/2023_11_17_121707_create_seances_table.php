@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('seances', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->date('jour');
+            $table->string('jour');
             $table->time('heurDebut');
             $table->time('heurFin');
             $table->unsignedBigInteger('idProf');
@@ -29,6 +29,7 @@ return new class extends Migration
             ->references('id')->on('salles')->onDelete('cascade');
             $table->foreign('idGroupe')
             ->references('id')->on('groupes')->onDelete('cascade');
+            $table->string('center');   
         });
     }
 

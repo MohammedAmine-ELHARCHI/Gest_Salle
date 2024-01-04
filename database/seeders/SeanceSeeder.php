@@ -13,16 +13,28 @@ class SeanceSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        DB::table('seances')->insert([
-            'jour' => $faker->date,
-            'heurDebut' => $faker->time,
-            'heurFin' => $faker->time,
-            'idProf' => 2, // Assuming user with id 2 is a professor
-            'idSalle' => $faker->numberBetween(1, 10), // Adjust as needed
-            'idGroupe' => $faker->numberBetween(1, 10), // Adjust as needed
-            'reserved' => $faker->boolean,
-        ]);
+        $days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+        $timeSlots = [
+            ['08:30', '10:30'],
+            ['10:30', '12:30'],
+            ['14:30', '16:30'],
+            ['16:30', '18:30']
+        ];
 
-        // Other seed data for different sessions if needed
+        foreach ($days as $day) {
+            $randomSlots = $faker->randomElements($timeSlots, 2);
+            foreach ($randomSlots as $slot) {
+                DB::table('seances')->insert([
+                    'jour' => $day,
+                    'heurDebut' => $slot[0],
+                    'heurFin' => $slot[1],
+                    'idProf' => 2, // l'utilisateur par default 
+                    'idSalle' => $faker->numberBetween(1, 10), 
+                    'idGroupe' => $faker->numberBetween(1, 10), 
+                    'reserved' => $faker->boolean,
+                    'center' => $faker->randomElement(['Gueliz','Center']),
+                ]);
+            }
+        }
     }
 }

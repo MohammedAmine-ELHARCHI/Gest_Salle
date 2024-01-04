@@ -37,9 +37,12 @@
 
                     @if(Auth::guard('web')->check())
 
-
+                    @php $id = Auth::guard('web')->id(); @endphp
                     <x-nav-link style="text-decoration:none;"  href="{{ route('groupe_Encadre') }}" :active="request()->routeIs('seances')">
                         {{ __('Vos groupes à encadré') }}
+                    </x-nav-link>
+                    <x-nav-link style="text-decoration:none;"  href="{{ route('teacher-schedule', ['id' => $id])  }}" :active="request()->routeIs('seances')">
+                        {{ __('Votre Emploi') }}
                     </x-nav-link>
                     
                     
