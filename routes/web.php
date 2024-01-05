@@ -77,5 +77,6 @@ Route::middleware([
 
     Route::get('/groupe-Encadre',[GroupeEncadreController::class,"getGroupe"])->name('groupe_Encadre');
     Route::get('generate-pdf', [PDFController::class, 'generatePDF'])->name('generate-pdf');
+    Route::get('generateEmploi-pdf', [PDFController::class, 'generateEmploie'])->name('generateEmploi-pdf');
     Route::get('/teacher-schedule/{id}', [professeur::class, 'getSchedule'])->name('teacher-schedule');
 });

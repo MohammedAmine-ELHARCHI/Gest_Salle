@@ -20,6 +20,7 @@ class professeur extends Controller
 
         public function getSchedule($id)
 {
+    
     $schedule = DB::table('seances')
         ->join('groupes', 'seances.idGroupe', '=', 'groupes.id')
         ->join('filieres', 'groupes.idFiliere', '=', 'filieres.id')

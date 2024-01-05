@@ -1,7 +1,10 @@
-<x-app-layout>
-    
-
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laravel 10 Generate PDF Example - ItSolutionStuff.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row justify-content-center align-items-center h-100">
@@ -43,10 +46,8 @@
                 </tr>
             @endforeach
         </tbody>
-        <button type="button" class="btn btn-light"><a href="{{route('generateEmploi-pdf')}}">Download Emploi des Seances</a></button>
+       
     </table>
-
-
               </div>
             </form>
           </div>
@@ -55,5 +56,5 @@
     </div>
   </div>
 </section>
-    
-</x-app-layout>
+</body>
+</html>
