@@ -17,7 +17,6 @@ class GroupeController extends Controller
 
     public function createGroupe(Request $request){
 
-
         $result = Groupe::insert([
             'idFiliere' => $request->idFiliere,
             'idAnne'=> $request->idAnne,

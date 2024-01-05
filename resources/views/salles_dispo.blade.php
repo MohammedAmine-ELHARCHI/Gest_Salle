@@ -18,7 +18,6 @@
     </tr>
   </thead>
   <tbody>
-
   @foreach($seances as $value)
   <tr>
       

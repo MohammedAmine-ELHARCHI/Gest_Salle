@@ -6,6 +6,7 @@ use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\GroupeEncadreController;
 use App\Http\Controllers\SeanceController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\professeur;
 use App\Models\Seance; // Assurez-vous d'importer le modèle approprié pour la table 'seances'
 use Illuminate\Http\Request;
 /*
@@ -69,11 +70,13 @@ Route::middleware([
                     ->orWhere('idProf', $id);
             })
             ->get();
-       // return response()->json(["msg"=> $idGroupe]);
+        //return response()->json(["msg"=>$seances]);
         return view('salles_dispo',compact('seances'));
     })->name('salleDispo');
 
 
     Route::get('/groupe-Encadre',[GroupeEncadreController::class,"getGroupe"])->name('groupe_Encadre');
     Route::get('generate-pdf', [PDFController::class, 'generatePDF'])->name('generate-pdf');
+    Route::get('generateEmploi-pdf', [PDFController::class, 'generateEmploie'])->name('generateEmploi-pdf');
+    Route::get('/teacher-schedule/{id}', [professeur::class, 'getSchedule'])->name('teacher-schedule');
 });

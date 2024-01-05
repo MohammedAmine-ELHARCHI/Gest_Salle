@@ -60,24 +60,13 @@ class AnneeController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Annee  $annee
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request, Annee $annee)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Annee  $annee
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy(Annee $annee)
     {
         //

@@ -100,10 +100,6 @@
 </select>
 </div>
 <br>
-<div class=" mt-4 form-outline datepicker w-100">
-                    <input name="GroupeNumber" type="text" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Numero de groupe</label>
-                  </div>
 
 <div class="col-12">
 <select name="idProf" class=" mt-4 pt-2 form-select" aria-label="Default select example">

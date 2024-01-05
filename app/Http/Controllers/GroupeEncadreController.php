@@ -83,6 +83,4 @@ return view('groupeEncadre',compact('user','result'));
             ->get();
         return view('salles_dispo',compact('seances'));
     }
-
-
 }
